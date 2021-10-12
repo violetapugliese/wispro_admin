@@ -1,0 +1,34 @@
+@import './Vars.scss';
+@import './Mobile.scss';
+@import './Tablet.scss';
+@import './Desktop.scss';
+@import './DesktopPro.scss';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+html{
+  background-color: $vp-dark;
+  color:  $vp-white;
+}
+body {
+    margin: 0;
+    font-family: $theme-font;
+    height: 100vh;
+}
+
+.container {
+      margin: 0 auto;
+  } 
+
+.home-link {
+  position: absolute;
+  top: 0;
+}
+
+  
