@@ -1,7 +1,8 @@
 #Wispro test front-end
 
+- firebase reactfire
 - react-bootstrap
-- json-server
-- encript MD5
+- dotenv-webpack - variables locales
+
 
 
