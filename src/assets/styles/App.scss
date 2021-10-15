@@ -1,8 +1,8 @@
-@import './Vars.scss';
-@import './Mobile.scss';
-@import './Tablet.scss';
-@import './Desktop.scss';
-@import './DesktopPro.scss';
+@import "./Vars.scss";
+@import "./Mobile.scss";
+@import "./Tablet.scss";
+@import "./Desktop.scss";
+@import "./DesktopPro.scss";
 
 * {
   margin: 0;
@@ -12,23 +12,36 @@
 ::-webkit-scrollbar {
   display: none;
 }
-html{
-  background-color: $vp-dark;
-  color:  $vp-white;
-}
+
 body {
-    margin: 0;
-    font-family: $theme-font;
-    height: 100vh;
+  margin: 0;
+  font-family: $theme-font !important;
+  background-image: linear-gradient(
+    to top,
+    #77c1d8,
+    #b1d2eb,
+    #dfe7f6,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  min-height: 100vh;
 }
 
 .container {
-      margin: 0 auto;
-  } 
+  margin: 0 auto;
+}
 
 .home-link {
   position: absolute;
   top: 0;
 }
-
-  

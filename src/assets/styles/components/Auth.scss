@@ -1,0 +1,24 @@
+@import "../Vars.scss";
+
+h3 {
+    color: $w-gray;
+}
+.form-checkin {
+    background-color: $w-blue;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 4px 3px 8px 1px #00000078;
+
+    h3 {
+        color: white;
+    }
+    a {
+        color: white;
+    }
+}
+.logo-img{
+    max-width: 100%;
+}
+.btn-auth {
+    width: 200px;
+}
