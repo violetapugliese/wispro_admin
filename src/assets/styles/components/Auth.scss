@@ -1,7 +1,10 @@
 @import "../Vars.scss";
 
-h3 {
-    color: $w-gray;
+.Auth {
+    height: 100%;
+    h3 {
+        color: $w-gray;
+    }
 }
 .form-checkin {
     background-color: $w-blue;

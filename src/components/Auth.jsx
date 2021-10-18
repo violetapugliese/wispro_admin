@@ -9,7 +9,7 @@ import "../assets/styles/components/Auth.scss";
 
 
 
-const Auth = ({children}) => {
+const Auth = ({ children }) => {
 
 
     const [email, setEmail] = useState(['']);
@@ -58,7 +58,7 @@ const Auth = ({children}) => {
                 {!hasUser &&
                     <Row className="py-5 d-flex align-items-end">
                         <Col xs={12} md={6} className="p-5" >
-                                <img className="logo-img" src={logo} alt="logo-wispro" />
+                            <img className="logo-img" src={logo} alt="logo-wispro" />
                             <Form className="d-flex flex-column align-items-center p-4">
                                 <h3 className="mb-3">Iniciar sesión </h3>
                                 <Form.Group className="mb-3 w-100 ps-2 " controlId="formBasicEmail">
@@ -70,7 +70,7 @@ const Auth = ({children}) => {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control type="password" className="rounded-pill" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                                 </Form.Group>
- 
+
                                 <Button variant="outline-dark" className="btn-auth btn-outline-primary rounded-pill" onClick={handleLogIn}>
                                     Log In
                                 </Button>
@@ -78,7 +78,7 @@ const Auth = ({children}) => {
                         </Col>
                         <Col xs={12} md={6} className="p-5">
                             <Form className="d-flex flex-column align-items-center p-4 form-checkin">
-                            <h3 className="mb-3">Registrar nuevo Usuario</h3>
+                                <h3 className="mb-3">Registrar nuevo Usuario</h3>
                                 <Form.Group className="mb-3 w-100 ps-2 " controlId="formBasicEmail">
                                     <Form.Label>Nombre y Apellido</Form.Label>
                                     <Form.Control type="name" className="rounded-pill" placeholder="Nombre y Apellido" onChange={(e) => setUserName(e.target.value)} />
@@ -105,19 +105,18 @@ const Auth = ({children}) => {
                     </Row>
                 }
                 {hasUser &&
-                <div>
-                    <Header></Header>
-                    <div className="w-100 d-flex justify-content-end">
-                    <Button variant="dark" className=" rounded-pill" onClick={handleLogOut}>
-                        Log Out
-                    </Button>
+                    <div>
+                        <div>
+                            {children}
+                        </div>
+                        <div className="w-100 d-flex justify-content-end">
+                            <Button variant="dark" className=" rounded-pill" onClick={handleLogOut}>
+                                Log Out
+                            </Button>
+                        </div>
+
                     </div>
 
-                   <div>
-                       {children}
-                   </div>
-                   </div>
-           
                 }
                 <Footer></Footer>
             </Container>
