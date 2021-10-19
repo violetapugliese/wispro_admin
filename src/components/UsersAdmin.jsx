@@ -22,14 +22,14 @@ const UsersAdmin = () => {
   }, []);
 
   
-  return users.length === 0 ? <div className="d-flex justifu-content-center align-items-center"><h6>Loading...</h6></div>
+  return users.length === 0 ? <div className="w-100 h-100 d-flex justify-content-center align-items-center"><h6>Loading...</h6></div>
     : (
       <div className="UsersAdmin">
         <h2 className="mb-3">Panel de control de usuarios</h2>
         <div className="w-100 mb-3 ">
         <AddModal />
         </div>
-        <Table striped bordered hover className="table-users">
+        <Table striped bordered hover className="table-users d-none d-sm-table">
           <thead>
             <tr>
               <th>Nombre y Apellido</th>
@@ -45,6 +45,27 @@ const UsersAdmin = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.rol}</td>
+                  <td>
+                  <UpdateModal user={user} />
+                   <RemoveModal user={user}/>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </Table>
+        <Table striped bordered hover className="table-users d-table d-sm-none">
+          <thead>
+            <tr>
+              <th>Nombre y Apellido</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) => {
+              return (
+                <tr key={user.id} >
+                  <td>{user.name}</td>
                   <td>
                   <UpdateModal user={user} />
                    <RemoveModal user={user}/>

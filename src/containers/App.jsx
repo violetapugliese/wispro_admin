@@ -21,7 +21,6 @@ const App = () => {
       <Router>
 
         <Auth>
-          <Header></Header>
           <Switch>
             <Route path="/" exact>
               <Index></Index>

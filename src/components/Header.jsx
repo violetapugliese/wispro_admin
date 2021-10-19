@@ -5,20 +5,22 @@ import logo from '../assets/static/logo-wispro.png';
 import "../assets/styles/components/Header.scss";
 
 
-const Header = () => {
+
+const Header = ({children}) => {
 
     return (
         <div className="header">
-            <Navbar  expand="lg">
+            <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home"><img  style={{ width: '140px '}} src={logo} alt="logo-wispro" /></Navbar.Brand>
+                    <Navbar.Brand href="/"><img  style={{ width: '140px '}} src={logo} alt="logo-wispro" /></Navbar.Brand>
+                    {children}   
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Collapse id="basic-navbar-nav" className="nav-bar">
                         <Nav className="me-auto">
-                            <Link to="/users"> 
+                            <Link className="me-3" to="/users"> 
                              Panel de control
                             </Link>
-                            <Link to="/data">
+                            <Link className="me-3" to="/data">
                             Estadísticas
                             </Link>
                         </Nav>

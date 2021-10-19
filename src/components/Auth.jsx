@@ -106,13 +106,15 @@ const Auth = ({ children }) => {
                 }
                 {hasUser &&
                     <div>
-                        <div>
-                            {children}
-                        </div>
-                        <div className="w-100 d-flex justify-content-end">
-                            <Button variant="dark" className=" rounded-pill" onClick={handleLogOut}>
+                        <Header>   
+                            <Col className="d-flex justify-content-end me-3">
+                            <Button  className="btn-auth" variant="outline-dark" className=" rounded-pill" onClick={handleLogOut}>
                                 Log Out
                             </Button>
+                            </Col>
+                        </Header>
+                        <div>
+                            {children}
                         </div>
 
                     </div>
