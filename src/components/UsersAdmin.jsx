@@ -22,7 +22,7 @@ const UsersAdmin = () => {
   }, []);
 
   
-  return users.length === 0 ? <div className="w-100 h-100 d-flex justify-content-center align-items-center"><h6>Loading...</h6></div>
+  return users.length === 0 ? <div className="loader" ><h6>Loading...</h6></div>
     : (
       <div className="UsersAdmin">
         <h2 className="mb-3">Panel de control de usuarios</h2>

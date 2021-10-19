@@ -39,14 +39,13 @@ const RemoveModal = ({ user }) => {
             <Modal show={removeModal} aria-labelledby="contained-modal-title-vcenter">
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Eliminar Usuario
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Alert variant="danger" >
                         <Alert.Heading>Estás a punto de eliminar un Usuario</Alert.Heading>
                         <p>
-                            Una vez que el usuario está eliminado, no podrás recuperar la información.
+                            Una vez que el usuario haya sido eliminado, no podrás recuperar la información.
                         </p>
                     </Alert>
                 </Modal.Body>
