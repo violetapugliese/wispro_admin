@@ -18,23 +18,23 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* <Router>
+      <Router>
 
         <Auth>
           <Header></Header>
           <Switch>
-          <Route path="/" exact>  
+            <Route path="/" exact>
               <Index></Index>
             </Route>
-            <Route path="/users">   */}
+            <Route path="/users">
               <UsersAdmin></UsersAdmin>
-            {/* </Route>
+            </Route>
             <Route path="/data">
               <Data></Data>
             </Route>
           </Switch>
         </Auth>
-      </Router> */}
+      </Router>
     </div>
   );
 };
