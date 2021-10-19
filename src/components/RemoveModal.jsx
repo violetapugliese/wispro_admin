@@ -33,11 +33,11 @@ const RemoveModal = ({ user }) => {
 
     return (
         <>
-            <Button variant="light" onClick={() => selectUser(user, 'Remove')}>
+            <Button className="rounded-pill me-3" variant="outline-danger" onClick={() => selectUser(user, 'Remove')}>
             <BiTrashAlt/>
             </Button>
             <Modal show={removeModal} aria-labelledby="contained-modal-title-vcenter">
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title id="contained-modal-title-vcenter">
                     </Modal.Title>
                 </Modal.Header>
@@ -50,8 +50,8 @@ const RemoveModal = ({ user }) => {
                     </Alert>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="danger" onClick={() => removeUser(user.id)}>Eliminar</Button>
-                    <Button variant="secondary" onClick={handleClose}>Cerrar</Button>
+                    <Button className="rounded-pill" variant="danger" onClick={() => removeUser(user.id)}>Eliminar</Button>
+                    <Button className="rounded-pill" variant="secondary" onClick={handleClose}>Cerrar</Button>
                 </Modal.Footer>
             </Modal>
         </>

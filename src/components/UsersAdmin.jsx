@@ -29,7 +29,7 @@ const UsersAdmin = () => {
         <div className="w-100 mb-3 ">
         <AddModal />
         </div>
-        <Table striped bordered hover className="table-users d-none d-sm-table">
+        <Table striped bordered hover className="table-users d-none d-sm-table rounded-pill">
           <thead>
             <tr>
               <th>Nombre y Apellido</th>
@@ -45,7 +45,7 @@ const UsersAdmin = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.rol}</td>
-                  <td>
+                  <td className="d-flex justify-content-center">
                   <UpdateModal user={user} />
                    <RemoveModal user={user}/>
                   </td>

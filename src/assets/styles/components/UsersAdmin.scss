@@ -32,3 +32,11 @@
     color: $w-blue;
     font-weight: 700;
 }
+.btn-add {
+    background-color: $w-blue !important;
+    border: 1px $w-blue solid !important;
+    color: white;
+}
+.btn-add:hover{
+    background-color: #127d85 !important;
+}

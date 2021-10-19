@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import {
+     getAuth, 
+     createUserWithEmailAndPassword, 
+     signOut, signInWithEmailAndPassword, 
+    } from "firebase/auth";
+import { collection,  addDoc } from "@firebase/firestore";
+import { db } from "../firebase";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import logo from '../assets/static/logo-wispro.png';
+import logo from '../assets/static/logo-wispro.png';    
 import Footer from "./Footer";
 import Header from "./Header";
 import "../assets/styles/components/Auth.scss";
@@ -14,7 +20,7 @@ const Auth = ({ children }) => {
 
     const [email, setEmail] = useState(['']);
     const [password, setPassword] = useState(['']);
-    const [userName, setUserName] = useState(['']);
+    const [name, setName] = useState(['']);
     const [hasUser, setHasUser] = useState();
 
     const auth = getAuth();
@@ -30,6 +36,7 @@ const Auth = ({ children }) => {
                 const errorMessage = error.message;
 
             });
+        createUser();
     }
 
     const handleLogIn = () => {
@@ -52,6 +59,9 @@ const Auth = ({ children }) => {
         });
     }
 
+    const createUser = async () => {
+        await addDoc(collection(db, "users"), { name: name, email: email })
+      }
     return (
         <div className="Auth">
             <Container>
@@ -81,7 +91,7 @@ const Auth = ({ children }) => {
                                 <h3 className="mb-3">Registrar nuevo Usuario</h3>
                                 <Form.Group className="mb-3 w-100 ps-2 " controlId="formBasicEmail">
                                     <Form.Label>Nombre y Apellido</Form.Label>
-                                    <Form.Control type="name" className="rounded-pill" placeholder="Nombre y Apellido" onChange={(e) => setUserName(e.target.value)} />
+                                    <Form.Control type="name" className="rounded-pill" placeholder="Nombre y Apellido" onChange={(e) => setName(e.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3 w-100 ps-2 " controlId="formBasicEmail">

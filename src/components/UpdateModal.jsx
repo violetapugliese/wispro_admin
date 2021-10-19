@@ -41,11 +41,11 @@ const UpdateModal = ({user}) => {
 
     return (
         <>
-            <Button variant="light" onClick={() => selectUser(user, 'Edit')}>
+            <Button className="rounded-pill me-3" variant="outline-dark" onClick={() => selectUser(user, 'Edit')}>
             <BiEditAlt />
             </Button>
             <Modal show={updateModalShow} aria-labelledby="contained-modal-title-vcenter">
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title id="contained-modal-title-vcenter">
                        Actualizar datos de usuario
                     </Modal.Title>
@@ -84,8 +84,8 @@ const UpdateModal = ({user}) => {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="success" onClick={() => updateUser(user.id)}>Guarar cambios</Button>
-                    <Button variant="secondary" onClick={handleClose}>Cerrar</Button>
+                    <Button className="rounded-pill" variant="success" onClick={() => updateUser(user.id)}>Guarar cambios</Button>
+                    <Button className="rounded-pill" variant="secondary" onClick={handleClose}>Cerrar</Button>
                 </Modal.Footer>
             </Modal>
         </>
