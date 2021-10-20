@@ -67,12 +67,12 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3 w-100 ps-2 " controlId="formBasicPassword">
-                    <Form.Label>Password (min 6 caracteres)</Form.Label>
+                    <Form.Label>Clave (min 6 caracteres)</Form.Label>
                     <Form.Control
                         type="password"
                         className="rounded-pill"
-                        {...register('newpassword', { min: 6 })}
-                        placeholder="Password"
+                        {...register('newpassword', { required: true})}
+                        placeholder="Clave"
                         onChange={(event) => { setRegisterPassword(event.target.value); }} />
                     {errors.newpassword && <span>Ingrese una clave de al menos 6 caracteres</span>}
                 </Form.Group>
