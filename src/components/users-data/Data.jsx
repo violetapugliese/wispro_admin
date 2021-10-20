@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import DataLogin from "./DataLogin";
-import "../assets/styles/components/Data.scss";
+import "../../assets/styles/components/Data.scss";
 
 
 

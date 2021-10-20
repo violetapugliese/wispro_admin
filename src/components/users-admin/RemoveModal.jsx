@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Modal, Alert } from "react-bootstrap";
-import { db } from "../firebase"
-import "../assets/styles/components/UsersAdmin.scss";
+import { db } from "../../firebase"
+import "../../assets/styles/components/UsersAdmin.scss";
 import { deleteDoc, doc } from "@firebase/firestore";
 import { BiTrashAlt } from "react-icons/bi"
 

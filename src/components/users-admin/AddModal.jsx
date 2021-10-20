@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { db } from "../firebase"
-import "../assets/styles/components/UsersAdmin.scss";
+import { db } from "../../firebase"
+import "../../assets/styles/components/UsersAdmin.scss";
 import { collection, addDoc } from "@firebase/firestore";
 
 

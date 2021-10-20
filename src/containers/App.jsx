@@ -4,10 +4,10 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Auth from '../components/Auth';
+import Auth from '../components/auth/Auth';
 import Index from "../components/Index";
-import UsersAdmin from "../components/UsersAdmin";
-import Data from "../components/Data";
+import UsersAdmin from "../components/users-admin/UsersAdmin";
+import Data from "../components/users-data/Data";
 import Header from "../components/Header";
 import "../assets/styles/App.scss";
 
