@@ -3,9 +3,12 @@
 .Auth {
     height: 100%;
 
-
     h3 {
         color: $w-gray;
+    }
+    label {
+        font-size: 15px;
+        margin: 0;
     }
 }
 .form-checkin {

@@ -6,9 +6,8 @@ import {updateDoc, doc } from "@firebase/firestore";
 import { BiEditAlt } from "react-icons/bi"
 
 
-const UpdateModal = ({user}) => {
+function UpdateModal ({user})  {
     
-
     const [updateModalShow, setUpdateModalShow] = useState(false);
     const handleClose = () => setUpdateModalShow(false);
     const handleShow = () => setUpdateModalShow(true);

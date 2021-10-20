@@ -5,8 +5,7 @@ import "../assets/styles/components/UsersAdmin.scss";
 import { deleteDoc, doc } from "@firebase/firestore";
 import { BiTrashAlt } from "react-icons/bi"
 
-const RemoveModal = ({ user }) => {
-
+function RemoveModal({ user }) {
 
     const [removeModal, setRemoveModal] = useState(false);
     const handleClose = () => setRemoveModal(false);

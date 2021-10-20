@@ -5,7 +5,7 @@ import "../assets/styles/components/UsersAdmin.scss";
 import { collection, addDoc } from "@firebase/firestore";
 
 
-const AddModal = () => {
+function AddModal() {
 
   const [newName, setNewName] = useState("");
   const [newEmail, setNewEmail] = useState("");

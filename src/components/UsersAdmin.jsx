@@ -8,8 +8,9 @@ import UpdateModal from "./UpdateModal";
 import RemoveModal from "./RemoveModal";
 
 
-const UsersAdmin = () => {
+function UsersAdmin () {
 
+  
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const UsersAdmin = () => {
     }
     getUsers();
 
-  }, []);
+  });
 
   
   return users.length === 0 ? <div className="loader" ><h6>Loading...</h6></div>

@@ -1,8 +1,5 @@
 @import "./Vars.scss";
-@import "./Mobile.scss";
-@import "./Tablet.scss";
-@import "./Desktop.scss";
-@import "./DesktopPro.scss";
+
 
 * {
   margin: 0;
@@ -16,6 +13,7 @@
 body {
   margin: 0;
   font-family: $theme-font !important;
+  // font-size: 18px !important;
   background-image: linear-gradient(
     to top,
     #77c1d8,
