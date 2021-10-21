@@ -19,7 +19,6 @@ function UsersAdmin () {
       setUsers(getData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
     getUsers();
-
   });
 
   
