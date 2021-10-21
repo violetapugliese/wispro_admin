@@ -10,11 +10,6 @@
         font-size: 15px;
         margin: 0;
     }
-    span {
-        font-size: 0.8rem;
-        color: #dc3545;
-        margin: 0;
-    }
 }
 .form-checkin {
     background-color: $w-blue;
@@ -34,4 +29,11 @@
 }
 .btn-auth {
     width: 200px;
+}
+form {
+    span {
+        font-size: 0.8rem;
+        color: #dc3545;
+        margin: 0;
+    }
 }
