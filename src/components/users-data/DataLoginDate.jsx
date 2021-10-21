@@ -49,7 +49,7 @@ const DataLoginDate = () => {
 
 
     return (
-        <div className="DataLogin">
+        <div className="DataLogin my-5">
             <div>
                 <h2 className="mb-3">Login por día </h2>
             </div>

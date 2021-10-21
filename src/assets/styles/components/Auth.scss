@@ -1,7 +1,12 @@
 @import "../Vars.scss";
 
 .Auth {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: calc(100vh - 5rem);
 
     h3 {
         color: $w-gray;

@@ -13,7 +13,6 @@
 body {
   margin: 0;
   font-family: $theme-font !important;
-  // font-size: 18px !important;
   background-image: linear-gradient(
     to top,
     #77c1d8,
@@ -42,4 +41,12 @@ body {
 .home-link {
   position: absolute;
   top: 0;
+}
+.app {
+  height: auto;
+  min-height: 100vh;
+}
+#app {
+  height: auto;
+  min-height: 100vh;
 }

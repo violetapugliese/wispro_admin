@@ -49,7 +49,7 @@ const DataLogin = () => {
 
 
     return (
-        <div className="DataLogin">
+        <div className="DataLogin my-5">
             <div>
                 <h2 className="mb-3">Login por día en el mes</h2>
             </div>

@@ -8,7 +8,7 @@ import Auth from '../components/auth/Auth';
 import Index from "../components/Index";
 import UsersAdmin from "../components/users-admin/UsersAdmin";
 import Data from "../components/users-data/Data";
-import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../assets/styles/App.scss";
 
 import '../firebase';
@@ -19,20 +19,20 @@ const App = () => {
   return (
     <div className="app">
       <Router>
-
         <Auth>
           <Switch>
             <Route path="/" exact>
-              <Index></Index>
+              <Index/>
             </Route>
             <Route path="/users">
-              <UsersAdmin></UsersAdmin>
+              <UsersAdmin/>
             </Route>
             <Route path="/data">
-              <Data></Data>
+              <Data/>
             </Route>
           </Switch>
         </Auth>
+        <Footer/>
       </Router>
     </div>
   );
