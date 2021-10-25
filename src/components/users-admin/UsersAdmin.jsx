@@ -19,7 +19,7 @@ function UsersAdmin () {
       setUsers(getData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
     getUsers();
-  });
+  }, [users]);
 
   
   return users.length === 0 ? <div className="loader" ><h6>Loading...</h6></div>
@@ -29,7 +29,7 @@ function UsersAdmin () {
         <div className="w-100 mb-3 ">
         <AddModal />
         </div>
-        <Table striped bordered hover className="table-users d-none d-sm-table rounded-pill">
+        <Table striped bordered hover className="table-users d-none d-sm-table">
           <thead>
             <tr>
               <th>Nombre y Apellido</th>

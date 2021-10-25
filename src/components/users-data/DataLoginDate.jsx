@@ -24,14 +24,15 @@ const DataLoginDate = () => {
             setInfoDate(info.date);
             setInfoUfd(info.ufd);
         } else {
-            setInfoDate("No hay valor registrado");
+            setInfoDate("No hay valores registrados");
             setInfoUfd("0");
         }    
     }
 
     useEffect(() => {
-        getInfo()
-    })
+        getInfo();
+    }, [select]);
+
     const data = {
         labels: [infoDate],
         datasets: [{    
