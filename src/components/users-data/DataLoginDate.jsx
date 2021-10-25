@@ -3,10 +3,11 @@ import { Bar } from 'react-chartjs-2';
 import DatePicker from 'react-datepicker';
 import { dl } from '../../js/fakedata'
 import 'react-datepicker/dist/react-datepicker.css'
+import { set } from '@firebase/database';
 
 
 const DataLoginDate = () => {
-
+  
     const [startDate, setStartDate] = useState(new Date());
 
     let d = startDate.getDate();
@@ -14,13 +15,28 @@ const DataLoginDate = () => {
     let y = startDate.getFullYear();
     let select = d + "/" + m + "/" + y
 
-    const getDateSelect = dl.find(item => item.date == select);
+    const [infoDate, setInfoDate] = useState("");
+    const [infoUfd, setInfoUfd] = useState("");
 
+    const getInfo = () => {
+        if(dl.some(item => item.date == select)){
+            const info = dl.find(item => item.date == select);
+            setInfoDate(info.date);
+            setInfoUfd(info.ufd);
+        } else {
+            setInfoDate("No hay valor registrado");
+            setInfoUfd("0");
+        }    
+    }
+
+    useEffect(() => {
+        getInfo()
+    })
     const data = {
-        labels: [getDateSelect.date],
-        datasets: [{
+        labels: [infoDate],
+        datasets: [{    
             label: 'Usuarios por día',
-            data: [getDateSelect.ufd],
+            data: [infoUfd],
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1,
@@ -39,20 +55,13 @@ const DataLoginDate = () => {
         },
     }
 
-    const getData = () => {
-        const getDateSelect = dl.find(item => { item.date == startDate });
-    }
-
-    useEffect(() => {
-        getData()
-    }, [])
-
-
     return (
         <div className="DataLogin my-5">
             <div>
                 <h2 className="mb-3">Login por día </h2>
             </div>
+            <h6>Seleccionar día</h6>
+            <p>(últimos datos registrados: 25/10/2021)</p>
             <DatePicker
                 dateFormat="dd/MM/yyyy"
                 selected={startDate}
